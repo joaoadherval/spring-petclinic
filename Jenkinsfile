@@ -9,6 +9,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building Maven application using docker!'
+                sh 'mvn -B -DskipTests clean package'
             }
         }
     }
